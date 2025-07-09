@@ -36,7 +36,7 @@ export default function PostCard({ post, isLoading }) {
   return (
     <div>
       {!showEdit ? (
-        <div className="  shadow-sm rounded-lg w-full mx-auto border border-gray-200  bg-white relative">
+        <div className="  shadow-sm rounded-lg w-full mx-auto border border-gray-200  bg-white relative  ">
           <div className="flex items-center justify-between relative">
             <div className="flex items-center gap-2 p-3 ">
               <img

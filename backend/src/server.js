@@ -13,7 +13,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://social-app-dup.vercel.app", // your actual frontend deployed URL
+    origin: ["https://social-app-dup.vercel.app", "http://localhost:5173"], // your actual frontend deployed URL
     credentials: true, // allow cookies and credentials
   })
 );
