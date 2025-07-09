@@ -66,8 +66,8 @@ export const updateProfileSchema = Joi.object({
     "string.min": "Username must be at least 3 characters long",
     "string.max": "Username must not exceed 20 characters",
   }),
-  bio: Joi.string().max(100).optional().messages({
-    "string.max": "Bio must not exceed 100 characters",
+  bio: Joi.string().max(200).optional().messages({
+    "string.max": "Bio must not exceed 200 characters",
   }),
 }).unknown(true);
 
@@ -78,9 +78,9 @@ export const onboardSchema = Joi.object({
     "string.min": "Username must be at least 3 characters long",
     "string.max": "Username must be at most 20 characters long",
   }),
-  bio: Joi.string().max(100).required().messages({
+  bio: Joi.string().max(200).required().messages({
     "string.empty": "Bio is required",
     "any.required": "Bio is required",
-    "string.max": "Bio must not exceed 100 characters",
+    "string.max": "Bio must not exceed 200 characters",
   }),
 });
