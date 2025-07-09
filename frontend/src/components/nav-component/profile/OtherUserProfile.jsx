@@ -192,7 +192,6 @@ export default function OtherUserProfile() {
               <EditBio setShowEditBio={setShowEditBio} user={user} />
             )}
           </div>
-          {/* Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quisquam, delectus in dignissimos ad eius fugiat sunt ipsam atque dicta nostrum molestias, eum quidem qui? Animi totam aut distinctio officia! */}
 
           {me?._id === user?._id && (
             <div
