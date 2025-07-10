@@ -8,6 +8,15 @@ export default function SearchBar({ setShowSearchBar, autoFocus }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedTerm, setDebouncedTerm] = useState("");
 
+  /*
+  why we debounced instead of using searchTerm directly:
+  
+  Avoids sending a request on every key press.
+
+Sends the API call 300ms after the user stops typing, not on every keystroke.
+
+Saves network bandwidth and API load. */
+
   const { data: searchResults } = useSearchUsersQuery(debouncedTerm, {
     skip: debouncedTerm.trim().length === 0,
   });
