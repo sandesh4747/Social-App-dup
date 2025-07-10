@@ -3,17 +3,11 @@ import profile from "../../assets/profile.png";
 import bgImage from "../../assets/bg.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../user/userSlice";
 
 export default function ProfileCard() {
   const { user } = useSelector((state) => state.userSlice);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (user) {
-  //     dispatch(setUser(user));
-  //   }
-  // }, [user]);
   const navigate = useNavigate();
 
   return (
