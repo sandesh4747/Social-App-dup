@@ -2,9 +2,12 @@ import React from "react";
 import profile from "../../assets/profile.png";
 import bgImage from "../../assets/bg.png";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export default function ProfileCard({ user }) {
+export default function ProfileCard() {
+  const { user } = useSelector((state) => state.userSlice);
   const navigate = useNavigate();
+  console.log(user);
   return (
     <div
       onClick={() => navigate(`/profile/${user?._id}`)}

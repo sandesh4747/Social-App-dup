@@ -26,7 +26,7 @@ export default function SuggestedUsers({ user, handleFollow, isLoading }) {
           </h1>
           <div className="space-y-3">
             {[...suggestedUsers]
-              .sort(() => Math.random() - 0.5) // Random shuffle
+              .sort(() => Math.random() - 0.5) //is a quick way to randomly shuffle an array.
               .slice(0, 5)
               .map((suggestedUser) => (
                 <div

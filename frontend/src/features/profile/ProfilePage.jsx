@@ -15,7 +15,6 @@ export default function ProfilePage() {
   const [showAllFollowers, setShowAllFollowers] = useState(false);
   const [showFollowersCard, setShowFollowersCard] = useState(false);
 
-  // const { user } = useSelector((state) => state.userSlice);
   const user = data?.user;
 
   const [toogleFollow, { isLoading }] = useToggleFollowMutation();
