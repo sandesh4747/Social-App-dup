@@ -9,11 +9,11 @@ export default function ProfileCard() {
   const { user } = useSelector((state) => state.userSlice);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (user) {
-      dispatch(setUser(user));
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user) {
+  //     dispatch(setUser(user));
+  //   }
+  // }, [user]);
   const navigate = useNavigate();
 
   return (
